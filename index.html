@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Endless Blueprint Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+
+<header>
+  <img src="endless.png" class="logo" />
+  <h1>Endless Blueprint Studio</h1>
+</header>
+
+<div class="container">
+
+  <div class="sidebar">
+    <h2>Project Setup</h2>
+
+    <label>Project Name</label>
+    <input type="text" id="projectName" value="MyEndlessProject"/>
+
+    <label>Network</label>
+    <select id="network">
+      <option value="testnet">Endless Testnet</option>
+      <option value="mainnet">Endless Mainnet</option>
+    </select>
+
+    <label>Project Type</label>
+    <select id="projectType">
+      <option value="erc20">ERC20 Token</option>
+      <option value="nft">NFT Collection</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="includeTests" checked/>
+      Include Tests
+    </label>
+
+    <label>
+      <input type="checkbox" id="includeDeploy" checked/>
+      Include Deploy Script
+    </label>
+
+    <button onclick="generate()">Generate</button>
+    <button onclick="exportZip()">Download ZIP</button>
+
+  </div>
+
+  <div class="preview">
+    <h2>Generated Code</h2>
+    <pre id="output"></pre>
+  </div>
+
+</div>
+
+<footer>
+  Made by sa1 for Endless
+</footer>
+
+<script src="generator.js"></script>
+<script src="exporter.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
