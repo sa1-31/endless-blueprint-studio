@@ -23,8 +23,8 @@
 
     <label>Network</label>
     <select id="network">
-      <option value="testnet">Endless Testnet</option>
-      <option value="mainnet">Endless Mainnet</option>
+      <option value="testnet">testnet</option>
+      <option value="mainnet">mainnet</option>
     </select>
 
     <label>Project Type</label>
@@ -34,23 +34,18 @@
     </select>
 
     <label>
-      <input type="checkbox" id="includeTests" checked/>
-      Include Tests
-    </label>
-
-    <label>
       <input type="checkbox" id="includeDeploy" checked/>
       Include Deploy Script
     </label>
 
-    <button onclick="generate()">Generate</button>
-    <button onclick="exportZip()">Download ZIP</button>
+    <button type="button" id="generateBtn">Generate</button>
+    <button type="button" id="downloadBtn">Download ZIP</button>
 
   </div>
 
   <div class="preview">
     <h2>Generated Code</h2>
-    <pre id="output"></pre>
+    <pre id="output">Click Generate...</pre>
   </div>
 
 </div>
@@ -59,8 +54,6 @@
   Made by sa1 for Endless
 </footer>
 
-<script src="generator.js"></script>
-<script src="exporter.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
